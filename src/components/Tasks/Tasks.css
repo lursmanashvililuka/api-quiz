@@ -1,0 +1,55 @@
+.question {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 20px;
+	border: 5px solid #e6cac8;
+	background-color:greenyellow;
+}
+
+.questionAndAnswers {
+  height: auto;
+  padding: auto;
+  width: auto;
+  border: 1px solid;
+  box-shadow:blue;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+}
+
+.answers {
+	
+	display: flex;
+	align-items: center;
+}
+
+.answer{
+	height: 25vh;
+	width: 24vw;
+	margin: 1vw;
+	font-family:'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .answers {
+  	display: flex;
+  	flex-direction:column-reverse;
+  }	
+
+  .answer {
+      height: 5vh;
+      width: 90vw;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+  }
+}
+
+.button {
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 5px;
+	background: green;
+	color: white;
+	width: 190px;
+	height: 30px;
+}

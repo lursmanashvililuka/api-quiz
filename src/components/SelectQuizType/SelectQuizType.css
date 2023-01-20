@@ -1,0 +1,20 @@
+body {
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.allButtons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	margin: 5px;
+	background: red;
+	color: white;
+	width: 190px;
+	height: 30px;
+}
