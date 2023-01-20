@@ -50,11 +50,11 @@ class SelectQuizType extends React.Component{
 				</div>
 				<div className='allButtons tc'>
 					{	// check both fields if they are not empty, display dificulty and then category, when they are entered display start button
-						trivia_difficulty != '' && trivia_category != '' 
+						trivia_difficulty !== '' && trivia_category !== '' 
 						?
 							<button className="button" onClick={this.getQuiz}>Start</button>
 						: 
-							trivia_difficulty != ''
+							trivia_difficulty !== ''
 						?
 							<select value={trivia_category} name="trivia_category" className="button" onChange={this.handleChange}>
 								<option value="any">Select Category</option>

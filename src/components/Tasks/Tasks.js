@@ -1,6 +1,6 @@
 import React from 'react'
 import './Tasks.css'
-import SelectQuizType from '../SelectQuizType/SelectQuizType'
+
 
 class Tasks extends React.Component {
 	constructor(props) {
@@ -32,7 +32,7 @@ class Tasks extends React.Component {
 		const { currentTask } = this.state
 		const { QAarray } = this.props
 		let num = Math.floor(Math.random() * 4)
-		if (num == 0 ) {
+		if (num === 0 ) {
 			return (
 				<div className='answers'>
 					<button onClick={this.changeQuestionForCorrect} className='answer' >{QAarray[currentTask].correct_answer}</button>
@@ -41,7 +41,7 @@ class Tasks extends React.Component {
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[2]}</button>
 				</div>
 			)
-		} else if(num == 1) {
+		} else if(num === 1) {
 			return (
 				<div className='answers'>
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[0]}</button>
@@ -50,7 +50,7 @@ class Tasks extends React.Component {
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[2]}</button>
 				</div>
 			)
-		} else if(num == 2) {
+		} else if(num === 2) {
 			return (
 				<div className='answers'>
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[0]}</button>
@@ -59,7 +59,7 @@ class Tasks extends React.Component {
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[2]}</button>
 				</div>
 			)
-		} else if(num == 3) {
+		} else if(num === 3) {
 			return (
 				<div className='answers'>
 					<button onClick={this.changeQuestionForWrong}  className='answer' >{QAarray[currentTask].incorrect_answers[0]}</button>
@@ -80,14 +80,14 @@ class Tasks extends React.Component {
 		const { currentTask } = this.state
 		const { QAarray } = this.props
 		let num = Math.floor(Math.random() * 2)
-		if(num == 0) {
+		if(num === 0) {
 			return (
 				<div className='answers tc'>
 					<button onClick={this.changeQuestionForCorrect} className='answer' >{QAarray[currentTask].correct_answer}</button>
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[0]}</button>
 				</div>
 			)
-		} else if(num == 1) {
+		} else if(num === 1) {
 			return (
 				<div className='answers tc'>
 					<button onClick={this.changeQuestionForWrong} className='answer' >{QAarray[currentTask].incorrect_answers[0]}</button>
@@ -113,7 +113,7 @@ class Tasks extends React.Component {
 				<div className='questionAndAnswers ma2 tc'>
 					<div className='question'><h4 className='tc'>{QAarray[currentTask].question}</h4></div>
 					{
-						QAarray[currentTask].incorrect_answers.length == 1 
+						QAarray[currentTask].incorrect_answers.length === 1 
 						?
 						this.shuffleTwoAnswer()
 						:
